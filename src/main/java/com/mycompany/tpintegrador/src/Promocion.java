@@ -1,10 +1,18 @@
 package com.mycompany.tpintegrador.src;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
+@Getter
+@Setter
+@NoArgsConstructor
 public class Promocion {
+
     private String denominacion;
     private LocalDate fechaDesde;
     private LocalDate fechaHasta;
@@ -15,10 +23,9 @@ public class Promocion {
     private TipoPromocion tipoPromocion;
     private List<Articulo> articulos;
 
-    public Promocion() {
-    }
-
-    public Promocion(String denominacion, LocalDate fechaDesde, LocalDate fechaHasta, LocalTime horaDesde, LocalTime horaHasta, String descripcionDescuento, Double precioPromocional, TipoPromocion tipoPromocion, List<Articulo> articulos) {
+    public Promocion(String denominacion, LocalDate fechaDesde, LocalDate fechaHasta,
+                     LocalTime horaDesde, LocalTime horaHasta, String descripcionDescuento,
+                     Double precioPromocional, TipoPromocion tipoPromocion, List<Articulo> articulos) {
         this.denominacion = denominacion;
         this.fechaDesde = fechaDesde;
         this.fechaHasta = fechaHasta;
@@ -27,78 +34,6 @@ public class Promocion {
         this.descripcionDescuento = descripcionDescuento;
         this.precioPromocional = precioPromocional;
         this.tipoPromocion = tipoPromocion;
-        this.articulos = articulos;
-    }
-
-    public String getDenominacion() {
-        return denominacion;
-    }
-
-    public void setDenominacion(String denominacion) {
-        this.denominacion = denominacion;
-    }
-
-    public LocalDate getFechaDesde() {
-        return fechaDesde;
-    }
-
-    public void setFechaDesde(LocalDate fechaDesde) {
-        this.fechaDesde = fechaDesde;
-    }
-
-    public LocalDate getFechaHasta() {
-        return fechaHasta;
-    }
-
-    public void setFechaHasta(LocalDate fechaHasta) {
-        this.fechaHasta = fechaHasta;
-    }
-
-    public LocalTime getHoraDesde() {
-        return horaDesde;
-    }
-
-    public void setHoraDesde(LocalTime horaDesde) {
-        this.horaDesde = horaDesde;
-    }
-
-    public LocalTime getHoraHasta() {
-        return horaHasta;
-    }
-
-    public void setHoraHasta(LocalTime horaHasta) {
-        this.horaHasta = horaHasta;
-    }
-
-    public String getDescripcionDescuento() {
-        return descripcionDescuento;
-    }
-
-    public void setDescripcionDescuento(String descripcionDescuento) {
-        this.descripcionDescuento = descripcionDescuento;
-    }
-
-    public Double getPrecioPromocional() {
-        return precioPromocional;
-    }
-
-    public void setPrecioPromocional(Double precioPromocional) {
-        this.precioPromocional = precioPromocional;
-    }
-
-    public TipoPromocion getTipoPromocion() {
-        return tipoPromocion;
-    }
-
-    public void setTipoPromocion(TipoPromocion tipoPromocion) {
-        this.tipoPromocion = tipoPromocion;
-    }
-
-    public List<Articulo> getArticulos() {
-        return articulos;
-    }
-
-    public void setArticulos(List<Articulo> articulos) {
         this.articulos = articulos;
     }
 }

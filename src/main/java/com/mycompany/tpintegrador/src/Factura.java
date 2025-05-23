@@ -1,7 +1,14 @@
 package com.mycompany.tpintegrador.src;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.time.LocalDate;
 
+@Getter
+@Setter
+@NoArgsConstructor
 public class Factura {
 
     private LocalDate fachaFacturacion;
@@ -12,72 +19,14 @@ public class Factura {
     private FormaPago formaPago;
     private double totalVenta;
 
-    public Factura() {
-    }
-
-    public Factura(LocalDate fachaFacturacion, Integer mpPaymentId, Integer mpMerchantOrderId, String mpPreferenceId, String mpPaymentType, FormaPago formaPago, double totalVenta) {
+    public Factura(LocalDate fachaFacturacion, Integer mpPaymentId, Integer mpMerchantOrderId,
+                   String mpPreferenceId, String mpPaymentType, FormaPago formaPago, double totalVenta) {
         this.fachaFacturacion = fachaFacturacion;
         this.mpPaymentId = mpPaymentId;
         this.mpMerchantOrderId = mpMerchantOrderId;
         this.mpPreferenceId = mpPreferenceId;
         this.mpPaymentType = mpPaymentType;
         this.formaPago = formaPago;
-        this.totalVenta = totalVenta;
-    }
-
-    public LocalDate getFachaFacturacion() {
-        return fachaFacturacion;
-    }
-
-    public void setFachaFacturacion(LocalDate fachaFacturacion) {
-        this.fachaFacturacion = fachaFacturacion;
-    }
-
-    public Integer getMpPaymentId() {
-        return mpPaymentId;
-    }
-
-    public void setMpPaymentId(Integer mpPaymentId) {
-        this.mpPaymentId = mpPaymentId;
-    }
-
-    public Integer getMpMerchantOrderId() {
-        return mpMerchantOrderId;
-    }
-
-    public void setMpMerchantOrderId(Integer mpMerchantOrderId) {
-        this.mpMerchantOrderId = mpMerchantOrderId;
-    }
-
-    public String getMpPreferenceId() {
-        return mpPreferenceId;
-    }
-
-    public void setMpPreferenceId(String mpPreferenceId) {
-        this.mpPreferenceId = mpPreferenceId;
-    }
-
-    public String getMpPaymentType() {
-        return mpPaymentType;
-    }
-
-    public void setMpPaymentType(String mpPaymentType) {
-        this.mpPaymentType = mpPaymentType;
-    }
-
-    public FormaPago getFormaPago() {
-        return formaPago;
-    }
-
-    public void setFormaPago(FormaPago formaPago) {
-        this.formaPago = formaPago;
-    }
-
-    public double getTotalVenta() {
-        return totalVenta;
-    }
-
-    public void setTotalVenta(double totalVenta) {
         this.totalVenta = totalVenta;
     }
 

@@ -1,23 +1,17 @@
 package com.mycompany.tpintegrador.src;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
 public class Imagen {
 
     private String denominacion;
 
-
-    public Imagen() {
-    }
-
     public Imagen(String denominacion) {
-        this.denominacion = denominacion;
-
-    }
-
-    public String getDenominacion() {
-        return denominacion;
-    }
-
-    public void setDenominacion(String denominacion) {
         this.denominacion = denominacion;
     }
 

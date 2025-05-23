@@ -1,8 +1,12 @@
 package com.mycompany.tpintegrador.src;
 
-import java.util.HashSet;
-import java.util.Set;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.util.HashSet;
+
+@Getter
+@Setter
 public class ArticuloManufacturado extends Articulo {
 
     private String descripcion;
@@ -11,15 +15,16 @@ public class ArticuloManufacturado extends Articulo {
 
     private HashSet<ArticuloManufacturadoDetalle> articuloManufacturadoDetalles = new HashSet<>();
 
-    public ArticuloManufacturado(String denominacion , double precioventa , UnidadMedida unidadMedida, Imagen imagen, String descripcion, Integer tiempoEstimadoMinutos, String preparacion) {
-        super(denominacion , precioventa , unidadMedida, imagen);
+    public ArticuloManufacturado(String denominacion, double precioVenta, UnidadMedida unidadMedida,
+                                 Imagen imagen, String descripcion, Integer tiempoEstimadoMinutos,
+                                 String preparacion) {
+        super(denominacion, precioVenta, unidadMedida, imagen);
         this.descripcion = descripcion;
         this.tiempoEstimadoMinutos = tiempoEstimadoMinutos;
         this.preparacion = preparacion;
     }
-
-
-
-
-
 }
+
+
+
+

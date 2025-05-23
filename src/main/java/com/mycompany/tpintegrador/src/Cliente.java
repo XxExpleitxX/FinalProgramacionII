@@ -1,9 +1,14 @@
 package com.mycompany.tpintegrador.src;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
+@Getter
+@Setter
 public class Cliente {
 
     private String nombre;
@@ -19,7 +24,8 @@ public class Cliente {
     private Set<Pedido> pedidos = new HashSet<>();
     private Set<Domicilio> domicilios = new HashSet<>();
 
-    public Cliente(String nombre, String apellido, String telefono, String mail, LocalDate fechaNacimiento, Imagen imagen, Usuario usuario, Domicilio domicilio) {
+    public Cliente(String nombre, String apellido, String telefono, String mail,
+                   LocalDate fechaNacimiento, Imagen imagen, Usuario usuario, Domicilio domicilio) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
@@ -28,8 +34,6 @@ public class Cliente {
         this.imagen = imagen;
         this.usuario = usuario;
         this.domicilio = domicilio;
-
-
     }
 
     @Override
